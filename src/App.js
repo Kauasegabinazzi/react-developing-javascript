@@ -5,8 +5,11 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <CampText />
+      <CampText label="Nome" />
+      <CampText label="Cargo" />
+      <CampText label="Imagem" />
     </div>
+    
   );
 }
 
