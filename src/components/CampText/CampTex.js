@@ -1,8 +1,10 @@
+import './CampText.css';
+
 const CampText = () => {
     return(
-        <div>
-            <label>Name</label>
-            <input></input>
+        <div className="campo-text">
+            <label>Nome</label>
+            <input placeholder='Digite seu nome'></input>
         </div>
     )
 }
