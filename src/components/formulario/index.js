@@ -1,6 +1,7 @@
 import './formulario.css';
 import CampText from '../CampText/CampTex';
 import List from '../List/index';
+import Buttons from '../Button/index';
 
 const Formulario = () => {
 
@@ -12,17 +13,20 @@ const Formulario = () => {
         'UX e Design',
         'Mobile',
         ' Inovação e Gestão'
-        ]
+    ]
 
     return (
         <section>
             <form className='formulario'>
                 <span className='teste'>
-                <h2>Preenche os dados</h2>
-                <CampText label="Nome" placeholder="Digite seu nome" />
-                <CampText label="Cargo" placeholder="Digite seu cargo" />
-                <CampText label="Imagem" placeholder="Digite o endereço da imagem" />
-                <List label="Time" itens={times}></List>
+                    <h2>Preenche os dados</h2>
+                    <CampText label="Nome" placeholder="Digite seu nome" />
+                    <CampText label="Cargo" placeholder="Digite seu cargo" />
+                    <CampText label="Imagem" placeholder="Digite o endereço da imagem" />
+                    <List label="Time" itens={times}></List>
+                    <Buttons>
+                        Criar Card
+                    </Buttons>
                 </span>
             </form>
         </section>
