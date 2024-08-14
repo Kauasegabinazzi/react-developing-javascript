@@ -15,15 +15,20 @@ const Formulario = () => {
         ' Inovação e Gestão'
     ]
 
+    const aoSalvar = (evento) => {
+        evento.preventDefault();
+        console.log('teste');
+    }
+
     return (
         <section>
-            <form className='formulario'>
+            <form className='formulario' onSubmit={aoSalvar}>
                 <span className='teste'>
                     <h2>Preenche os dados</h2>
-                    <CampText label="Nome" placeholder="Digite seu nome" />
-                    <CampText label="Cargo" placeholder="Digite seu cargo" />
-                    <CampText label="Imagem" placeholder="Digite o endereço da imagem" />
-                    <List label="Time" itens={times}></List>
+                    <CampText obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
+                    <CampText obrigatorio={true} label="Cargo" placeholder="Digite seu cargo" />
+                    <CampText obrigatorio={true} label="Imagem" placeholder="Digite o endereço da imagem" />
+                    <List obrigatorio={true} label="Time" itens={times}></List>
                     <Buttons>
                         Criar Card
                     </Buttons>

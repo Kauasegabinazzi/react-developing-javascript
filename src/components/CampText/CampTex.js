@@ -3,10 +3,10 @@ import './CampText.css';
 const CampText = (props) => {
     const placeholderModificada = `${props.placeholder}...`
 
-    return(
+    return (
         <div className="campo-text">
             <label>{props.label}</label>
-            <input placeholder={placeholderModificada}></input>
+            <input required={props.obrigatorio} placeholder={placeholderModificada}></input>
         </div>
     )
 }
