@@ -2,6 +2,7 @@ import './formulario.css';
 import CampText from '../CampText/CampTex';
 import List from '../List/index';
 import Buttons from '../Button/index';
+import { useState } from 'react';
 
 const Formulario = () => {
 
@@ -14,6 +15,8 @@ const Formulario = () => {
         'Mobile',
         ' Inovação e Gestão'
     ]
+
+    const [value, setValor] = useState('');
 
     const aoSalvar = (evento) => {
         evento.preventDefault();
