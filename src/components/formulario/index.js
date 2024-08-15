@@ -16,11 +16,14 @@ const Formulario = () => {
         ' Inovação e Gestão'
     ]
 
-    const [value, setValor] = useState('');
+    const [nome, setNome] = useState('');
+    const [cargo, setCargo] = useState('');
+    const [imagem, setImagem] = useState('');
+    const [time, setTime] = useState('');
 
     const aoSalvar = (evento) => {
         evento.preventDefault();
-        console.log('teste');
+        console.log(time);
     }
 
     return (
@@ -28,10 +31,10 @@ const Formulario = () => {
             <form className='formulario' onSubmit={aoSalvar}>
                 <span className='teste'>
                     <h2>Preenche os dados</h2>
-                    <CampText obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
-                    <CampText obrigatorio={true} label="Cargo" placeholder="Digite seu cargo" />
-                    <CampText obrigatorio={true} label="Imagem" placeholder="Digite o endereço da imagem" />
-                    <List obrigatorio={true} label="Time" itens={times}></List>
+                    <CampText value={nome} aoAlterado={value => setNome(value)} obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
+                    <CampText value={cargo} aoAlterado={value => setCargo(value)} obrigatorio={true} label="Cargo" placeholder="Digite seu cargo" />
+                    <CampText value={imagem} aoAlterado={value => setImagem(value)} obrigatorio={true} label="Imagem" placeholder="Digite o endereço da imagem" />
+                    <List value={time} aoAlterado={value => setTime(value)} obrigatorio={true} label="Time" itens={times}></List>
                     <Buttons>
                         Criar Card
                     </Buttons>
