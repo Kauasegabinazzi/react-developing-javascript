@@ -5,6 +5,44 @@ import Team from '../src/components/Team/index';
 
 function App() {
 
+  const Teams = [
+    {
+      nome: 'Programação',
+      corPrimaria: '',
+      corSecundaria: ''
+    },
+    {
+      nome: 'Front-End',
+      corPrimaria: '',
+      corSecundaria: ''
+    },
+    {
+      nome: 'Data Science',
+      corPrimaria: '',
+      corSecundaria: ''
+    },
+    {
+      nome: 'Devops',
+      corPrimaria: '',
+      corSecundaria: ''
+    },
+    {
+      nome: 'UX e Design',
+      corPrimaria: '',
+      corSecundaria: ''
+    },
+    {
+      nome: 'Mobile',
+      corPrimaria: '',
+      corSecundaria: ''
+    },
+    {
+      nome: 'Inovação e Gestão',
+      corPrimaria: '',
+      corSecundaria: ''
+    }
+  ]
+
   const [colaboradores, setColaboradores] = useState([])
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
@@ -20,7 +58,7 @@ function App() {
       <Team nome="Front-End"></Team>
       <Team nome="Data Science"></Team>
     </div>
-    
+
   );
 }
 
