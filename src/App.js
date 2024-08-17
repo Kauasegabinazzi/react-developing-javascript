@@ -8,38 +8,38 @@ function App() {
   const Teams = [
     {
       nome: 'Programação',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#57C278',
+      corSecundaria: '#D9F7E9'
     },
     {
       nome: 'Front-End',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#82CFFA',
+      corSecundaria: '#E8F8FF'
     },
     {
       nome: 'Data Science',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#A6D157',
+      corSecundaria: '#F0F8E2'
     },
     {
       nome: 'Devops',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#E06B69',
+      corSecundaria: '#FDE7E8'
     },
     {
       nome: 'UX e Design',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#D86EBF',
+      corSecundaria: '#FAE5F5'
     },
     {
       nome: 'Mobile',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#FEBA05',
+      corSecundaria: '#FFF5D9'
     },
     {
       nome: 'Inovação e Gestão',
-      corPrimaria: '',
-      corSecundaria: ''
+      corPrimaria: '#FF8A29',
+      corSecundaria: '#FFEEDF'
     }
   ]
 
@@ -54,9 +54,7 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario aoColaboradorCadastrado={aoNovoColaboradorAdicionado}></Formulario>
-      <Team nome="Programação"></Team>
-      <Team nome="Front-End"></Team>
-      <Team nome="Data Science"></Team>
+      {Teams.map(team => <Team key={team.nome} nome={team.nome} corPrimaria={team.corPrimaria} corSecundaria={team.corSecundaria}></Team> )}
     </div>
 
   );
