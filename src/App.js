@@ -54,7 +54,12 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario time={Teams.map(team => team.nome)} aoColaboradorCadastrado={aoNovoColaboradorAdicionado}></Formulario>
-      {Teams.map(team => <Team key={team.nome} nome={team.nome} corPrimaria={team.corPrimaria} corSecundaria={team.corSecundaria}></Team> )}
+      {Teams.map(team => <Team 
+      key={team.nome}
+      nome={team.nome}
+      corPrimaria={team.corPrimaria} 
+      corSecundaria={team.corSecundaria}
+      colaboradores={colaboradores.filter(colaborador => colaborador.time == team.nome)}></Team> )}
     </div>
 
   );
