@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario aoColaboradorCadastrado={aoNovoColaboradorAdicionado}></Formulario>
+      <Formulario time={Teams.map(team => team.nome)} aoColaboradorCadastrado={aoNovoColaboradorAdicionado}></Formulario>
       {Teams.map(team => <Team key={team.nome} nome={team.nome} corPrimaria={team.corPrimaria} corSecundaria={team.corSecundaria}></Team> )}
     </div>
 

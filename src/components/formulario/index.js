@@ -6,16 +6,6 @@ import { useState } from 'react';
 
 const Formulario = (props) => {
 
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
@@ -39,7 +29,7 @@ const Formulario = (props) => {
                     <CampText value={nome} aoAlterado={value => setNome(value)} obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
                     <CampText value={cargo} aoAlterado={value => setCargo(value)} obrigatorio={true} label="Cargo" placeholder="Digite seu cargo" />
                     <CampText value={imagem} aoAlterado={value => setImagem(value)} obrigatorio={true} label="Imagem" placeholder="Digite o endereço da imagem" />
-                    <List value={time} aoAlterado={value => setTime(value)} obrigatorio={true} label="Time" itens={times}></List>
+                    <List value={time} aoAlterado={value => setTime(value)} obrigatorio={true} label="Time" itens={props.time}></List>
                     <Buttons>
                         Criar Card
                     </Buttons>
