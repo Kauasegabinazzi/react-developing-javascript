@@ -4,7 +4,7 @@ import List from '../List/index';
 import Buttons from '../Button/index';
 import { useState } from 'react';
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const times = [
         'Programação',
@@ -23,7 +23,12 @@ const Formulario = () => {
 
     const aoSalvar = (evento) => {
         evento.preventDefault();
-        console.log(time);
+        props.aoColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     }
 
     return (
